@@ -45,6 +45,8 @@ kelowna_aaa_dose_file = BASEDIR / "dicom" / "RD.$Physics539.OSLDandFilm.Kelowna.
 
 def main():
 
+    plt.switch_backend('TkAgg')  # or 'Qt5Agg' if TkAgg is not available
+    
     # do full film calibration and calculate plan dose
     #type: channel
     calibrate_film("red")

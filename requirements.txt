@@ -24,6 +24,9 @@ pydicom==2.4.4
 pylint==3.3.5
 pymedphys==0.41.0
 pyparsing==3.2.1
+PyQt5==5.15.11
+PyQt5-Qt5==5.15.16
+PyQt5_sip==12.17.0
 pytest==8.3.5
 pytest-rerunfailures==15.0
 pytest-sugar==1.0.0
