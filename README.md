@@ -19,7 +19,9 @@ However, to use this properly, you must read and follow this procedure:
     ```
     apt install -y libgl1
     apt install python3-tk
+    pip install PyQt5
     ```
+    - and uncomment ``` #plt.switch_backend('TkAgg')  # or 'Qt5Agg' if TkAgg is not available``` in main.py. Again, only if using Ubuntu
 3. Enter your virtual environment and install the requirements file
     - If in windows: ```.\.venv\Scripts\activate```
     - If in bash: ```source .venv/bin/active```
@@ -28,3 +30,6 @@ However, to use this properly, you must read and follow this procedure:
     - *DO NOT* submit the sample_data as your data.
     - You can save the new data in a new folder and edit the code to read from there.
     - You will also likely need to change the ROI where the calibration is read from on the film. Instructions are in the code comments.
+
+
+If something does not work, please try and troubleshoot it first. It will likely be versioning of some sort, which you can adjust yourself. Feel free to reach out if there are any further issues. It may be better for your purposes as well to transfer this code to a jupyter notebook. Likely easier to run.
