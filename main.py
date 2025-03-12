@@ -142,7 +142,8 @@ def calibrate_film(type):
 
     # Compute optical density & dose
     plan_od = np.log10(new_flood_image / plan_image)
-    plan_dose = calibration_curve(plan_od)
+    plan_od_clipped = np.clip(plan_od, min(calib_pixel_values), max(calib_pixel_values))
+    plan_dose = calibration_curve(plan_od_clipped)
 
     # Compute film image origin
     size_mm = np.array(np.shape(plan_dose)) * plan_image_handle.reso_mm
